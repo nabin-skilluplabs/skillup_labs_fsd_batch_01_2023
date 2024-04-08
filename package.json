@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Suraj Sharma",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "photoswipe": "^5.4.3"
+  }
 }
