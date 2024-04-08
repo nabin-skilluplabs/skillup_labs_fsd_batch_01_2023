@@ -8,5 +8,8 @@
   },
   "author": "Utsav Baral",
   "license": "ISC",
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "photoswipe": "^5.4.3"
+  }
 }
