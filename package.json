@@ -1,0 +1,11 @@
+{
+  "name": "full_stack_development_learning",
+  "version": "1.0.0",
+  "description": "Learning materials for my web development program",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aashish Roka",
+  "license": "ISC"
+}
