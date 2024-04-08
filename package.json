@@ -6,7 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["HTML","CSS", "Javascript"],
+  "keywords": [
+    "HTML",
+    "CSS",
+    "Javascript"
+  ],
   "author": "Nabin Singh",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "photoswipe": "^5.4.3"
+  }
 }
