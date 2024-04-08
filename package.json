@@ -1,12 +1,19 @@
 {
-  "name": "skillup_labs_fsd_batch_01_2023",
+  "name": "full_stack_development_learning",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["HTML","CSS", "Javascript"],
-  "author": "Nabin Singh",
-  "license": "ISC"
+  "keywords": [
+    "HTML",
+    "CSS",
+    "Javascript"
+  ],
+  "author": "Aashish Roka",
+  "license": "ISC",
+  "dependencies": {
+    "photoswipe": "^5.4.3"
+  }
 }
