@@ -1,17 +1,11 @@
 {
   "name": "full_stack_development_learning",
   "version": "1.0.0",
-  "description": "learning material for my web development program",
+  "description": "Learning materials for my web development program",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Suraj Sharma",
-  "license": "ISC",
-  "dependencies": {
-    "photoswipe": "^5.4.3"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.4.3"
-  }
+  "license": "ISC"
 }
