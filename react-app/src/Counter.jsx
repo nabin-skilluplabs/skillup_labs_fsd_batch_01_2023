@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "./Header";
 import Button from "./Button";
 
-function App() {
+function Counter() {
   const appName = "React Counter";
   const [count, setCount] = useState(0);
   const increment = () => {
@@ -26,4 +26,4 @@ function App() {
   )
 }
 
-export default App
+export default Counter

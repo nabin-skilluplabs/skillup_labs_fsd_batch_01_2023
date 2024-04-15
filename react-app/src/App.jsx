@@ -8,7 +8,7 @@ export default function App() {
         },
         {
             title: "Counter",
-            path: "./Counter.jsx"
+            path: "/counter"
         }
     ]
 
