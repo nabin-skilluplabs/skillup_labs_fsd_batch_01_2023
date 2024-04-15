@@ -21,8 +21,8 @@ function App() {
       <Header appName = {appName}/>
       <h2 className=" text-4xl font-bold text-center margin-4">{count}</h2>
       <div className="flex justify-center space-x-1">
-          <Button  symbol="+" action={increment} bg = "bg-red-600"/>
-          <Button symbol="-" action={decreament} bg = 'bg-blue-500'/>
+          <Button  symbol="+" action={increment} bg="bg-red-600"/>
+          <Button symbol="-" action={decreament} bg="bg-blue-500"/>
       </div>
     </div>
   )
