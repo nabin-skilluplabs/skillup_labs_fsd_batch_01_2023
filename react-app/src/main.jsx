@@ -5,13 +5,19 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import App from './App.jsx'
+import App from './App.jsx';
+import Counter from './Counter.jsx'
+
 import './index.css'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/counter",
+    element: <Counter />,
   },
 ]);
 
