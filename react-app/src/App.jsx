@@ -20,8 +20,8 @@ setCount(count + 1);
 <Header appName={appName}/>
       <h2 className="text-4xl font-bold text-center mt-4">{count}</h2>
       <div className="font-bold flex justify-center gap-4 text-5xl mt-5">
-        <Button symbol ="+" action ={increment} bg = "bg-red-600"/>
-        <Button symbol ="-" action ={decrement} bg = "bg-red-600"/>
+        <Button symbol="+" action={increment} bg= "bg-red-600"/>
+        <Button symbol="-" action={decrement} bg= "bg-red-600"/>
       </div>
     </div>
   )
