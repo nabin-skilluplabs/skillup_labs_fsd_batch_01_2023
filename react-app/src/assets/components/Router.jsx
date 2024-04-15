@@ -1,6 +1,7 @@
 import React from 'react'
 import App from '../../App.jsx'
 import Counter from '../../Counter.jsx'
+import Stock from '../../Stock.jsx';
 
 import {
     createBrowserRouter,
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
     {
         path: "/counter",
         element: <Counter />,
+    },
+    {
+        path: "/stock",
+        element: <Stock />,
     }
 ]);
 export default router;

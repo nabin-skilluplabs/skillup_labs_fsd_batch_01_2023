@@ -9,6 +9,10 @@ export default function App() {
         {
             title: "Counter",
             path: "/counter"
+        },
+        {
+            title: "Stock",
+            path: "/stock"
         }
     ]
 
