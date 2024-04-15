@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 
-import App from './Counter.jsx'
+import App from './App.jsx'
 import './index.css'
 
 const router = createBrowserRouter([
