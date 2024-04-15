@@ -15,7 +15,7 @@ const productDate = [
 
 function Stock(){
     return(
-        <div>
+        <div >
             <Header appName="Stock Management" />
             <FilterableProductTable productDate = {productDate} />
         </div>

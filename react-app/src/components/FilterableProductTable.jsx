@@ -1,10 +1,10 @@
-import SearchBar from "../components/SearchBar";
+import SearchBar from "./SearchBar";
 
 function FilterableProductTable(productDate){
     return(
-        <div>
+        <div  className="flex flex-row mt-4 justify-center border">
             <SearchBar />
         </div>
     );
 }
-export default FilterableProductTable
+export default FilterableProductTable;
