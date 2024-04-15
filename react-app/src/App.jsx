@@ -9,6 +9,10 @@ export default function App() {
         {
             title: "Counter",
             path: "/counter"
+        },
+        {
+            title: "Sock Management",
+            path: "/stock"
         }
     ];
     return(
