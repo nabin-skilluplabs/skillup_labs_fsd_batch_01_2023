@@ -10,7 +10,12 @@ export default function App() {
         {
             title: "Counter",
             path: "/counter"
-        }
+        },
+
+        {
+            title: "Stock Management",
+            path: "/stock"
+          },
     ];
     return(
         <div className="text-center">
