@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Header } from "./Header"
+import Header from "./Header";
+import Button from "./Button";
 
 function App() {
   const appName = "React Counter";
@@ -8,7 +9,9 @@ function App() {
     setCount(count + 1);
   }
   const decrement = () => {
-    setCount(count - 1);
+    if (count >= 1) {
+      setCount(count - 1);
+    }
   }
 
   return (
@@ -16,8 +19,8 @@ function App() {
       <Header appName={appName} />
       <h2 className="text-4xl font-bold text-center m-4">{count}</h2>
       <div className="flex justify-center space-x-5">
-        <button onClick={increment} className="bg-red-600 p-8 rounded text-4xl">+</button>
-        <button onClick={decrement} className="bg-red-600 p-8 rounded text-4xl">-</button>
+        <Button symbol="+" action={increment} bg="red-600" />
+        <Button symbol="-" action={decrement} bg="green-600" />
       </div>
     </div>
   )
