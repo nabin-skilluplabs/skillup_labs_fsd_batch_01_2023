@@ -14,9 +14,19 @@ function FilterableProductTable({ productData }) {
       setCurrentProducts(productData);
     }
   }
+  function searchProducts(event) {
+    const query = event.target.value;
+    const filteredProcucts = productData.filter(
+      (product) => product.name.toLowerCase().indexOf(query.toLowerCase()) >= 0
+    );
+    setCurrentProducts(filteredProcucts);
+  }
   return (
     <div className="w-96 mt-10 bg-gray-100 p-4 place-self-center">
-      <SearchBar filterStocked={filterStocked} />
+      <SearchBar
+        searchProducts={searchProducts}
+        filterStocked={filterStocked}
+      />
       <ProductTable productData={currentProducts} />
     </div>
   );

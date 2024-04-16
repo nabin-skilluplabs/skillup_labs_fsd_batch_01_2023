@@ -1,7 +1,8 @@
-function SearchBar({ filterStocked }) {
+function SearchBar({ filterStocked, searchProducts }) {
   return (
     <div>
       <input
+        onKeyDown={searchProducts}
         className="block my-3 p-4 w-full"
         placeholder="Search..."
         type="search"
