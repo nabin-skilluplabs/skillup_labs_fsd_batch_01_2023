@@ -18,8 +18,8 @@ function FilterableProductTable({productData}) {
 
     function searchProducts(event) {
         const query = event.target.value;
-
-        console.log(query);
+        const filteredProducts = productData.filter(product =>  product.name.toLowerCase().indexOf(query.toLowerCase()) >= 0);
+        setCurrentProducts(filteredProducts); 
     }
 
     return (
