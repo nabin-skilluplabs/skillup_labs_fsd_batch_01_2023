@@ -1,5 +1,7 @@
 import Header from "./components/Header";
 import FilterableProductTable from "./components/FilterableProductTable";
+import ProductTable from "./components/ProductTable";
+
 const productData = [
   { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
   { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
@@ -12,7 +14,8 @@ function Stock() {
   return (
     <div>
       <Header appName="Stock Management" />
-      <FilterableProductTable />
+      <FilterableProductTable productData={productData} />
+      <ProductTable />
     </div>
   );
 }
