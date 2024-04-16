@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import FiltarableProductTable from "./FilterableProductTable"
 
-const productData= [
+const productData = [
     { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
     { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
     { category: "Fruits", price: "$2", stocked: false, name: "Passionfruit" },
