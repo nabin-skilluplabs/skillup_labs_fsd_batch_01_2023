@@ -14,12 +14,17 @@ function FilterableProductTable({productData}) {
         else {
             setCurrentProducts(productData);
         }
-        
+    }
+
+    function searchProducts(event) {
+        const query = event.target.value;
+
+        console.log(query);
     }
 
     return (
         <div className="w-96 mt-10 bg-gray-50 p-4 place-self-center">
-            <SearchBar filterStocked={filterStocked} />
+            <SearchBar searchProducts={searchProducts} filterStocked={filterStocked} />
             <ProductTable productData={currentProducts} />
         </div>
     );
