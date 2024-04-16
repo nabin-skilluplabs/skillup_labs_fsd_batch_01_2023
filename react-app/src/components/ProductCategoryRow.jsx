@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 function ProductCategoryRow({ category }) {
   return (
     <tr>
