@@ -3,7 +3,7 @@ import FilterableProductTable from "./components/FilterableProductTable";
 
 
 
-const productDate = [
+const productData = [
     { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
     { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
     { category: "Fruits", price: "$2", stocked: false, name: "Passionfruit" },
@@ -18,7 +18,7 @@ function Stock(){
     return(
         <div className="flex flex-col">
             <Header appName="Stock Management" />
-            <FilterableProductTable productDate = {productDate} />
+            <FilterableProductTable productData = {productData} />
           
 
         </div>
