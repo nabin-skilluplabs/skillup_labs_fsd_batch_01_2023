@@ -2,7 +2,7 @@ function SearchBar({ filterStocked, searchProducts }) {
   return (
     <div>
       <input
-        onKeyDown={searchProducts}
+        onKeyUp={searchProducts}
         className="block my-3 p-4 w-full"
         placeholder="Search..."
         type="search"
