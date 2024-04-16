@@ -3,10 +3,22 @@ import SearchBar from "./SearchBar";
 import ProductTable from "./ProductTable";
 
 function FilterableProductTable({ productData }) {
+  const [currentProducts, setCurrentProducts] = useState(productData);
+  function filterStocked(event) {
+    const isChecked = event.target.checked;
+    if (isChecked) {
+      const filteredProcucts = ProductTable.filter(
+        (product) => product.stocked
+      );
+      setCurrentProducts(filteredProcucts);
+    } else {
+      setCurrentProducts(productData);
+    }
+  }
   return (
     <div className="w-96 mt-10 bg-gray-100 p-4 place-self-center">
-      <SearchBar />
-      <ProductTable productData={productData} />
+      <SearchBar filterStocked={filterStocked} />
+      <ProductTable productData={currentProducts} />
     </div>
   );
 }

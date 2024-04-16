@@ -9,6 +9,8 @@ const productData = [
   { category: "Vegetables", price: "$2", stocked: true, name: "Spinach" },
   { category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin" },
   { category: "Vegetables", price: "$1", stocked: true, name: "Peas" },
+  { category: "Groceries", price: "$5", stocked: false, name: "Rice" },
+  { category: "Groceries", price: "$6", stocked: true, name: "milk" },
 ];
 function Stock() {
   return (

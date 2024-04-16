@@ -1,4 +1,4 @@
-function SearchBar() {
+function SearchBar({ filterStocked }) {
   return (
     <div>
       <input
@@ -7,7 +7,7 @@ function SearchBar() {
         type="search"
       />
       <label htmlFor="inStock">
-        <input type="checkbox" id="inStock" />
+        <input onClick={filterStocked} type="checkbox" id="inStock" />
         Only Show products in stock
       </label>
     </div>
