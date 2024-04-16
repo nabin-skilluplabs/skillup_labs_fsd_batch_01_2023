@@ -1,9 +1,11 @@
 import SearchBar from "./SearchBar";
+import ProductTable from "./ProductTable"
 
-function FilterableProductTable(productDate){
+function FilterableProductTable({productData}){
     return(
-        <div  className="flex flex-row mt-4 justify-center border">
+        <div  className=" w-96 mt-10 place-self-center bg-gray-100  border">
             <SearchBar />
+            <ProductTable productDate={productData} />
         </div>
     );
 }

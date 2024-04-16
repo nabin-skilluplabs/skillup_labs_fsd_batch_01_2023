@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import FilterableProductTable from "./components/FilterableProductTable";
 
 
+
 const productDate = [
     { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
     { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
@@ -15,9 +16,11 @@ const productDate = [
 
 function Stock(){
     return(
-        <div >
+        <div className="flex flex-col">
             <Header appName="Stock Management" />
             <FilterableProductTable productDate = {productDate} />
+          
+
         </div>
     )
 }
