@@ -29,21 +29,14 @@ function ProductTable({productData}){
                     <React.Fragment key={`cat_${index}`}category={category}>
                         <ProductCategorieRow category={category} />
                     {
-                        productData.filter(product => product.category === category).map(product => (
-                            <productRow key={`product_${pIndex}`} name={product.name} price={product.price} stock={product.stock} />
+                        productData.filter(product => product.category === category).map((product, pIndex) => (
+                            <ProductRow key={`product_${pIndex}`} name={product.name} price={product.price} stock={product.stocked} />
                         ))
                     }
                     </React.Fragment>
                 ))
             }
-            <ProductCategorieRow  category="Fruits"/>
-            <ProductRow name="Apple" price="$1" stock ={true} />
-            <ProductRow name="Dragonfruit" price="$1" stock ={true} />
-            <ProductRow name="Passionfruit" price="$2" stock={false} />
-            <ProductCategorieRow  category="Vegetable"/>
-            <ProductRow name="Spinach" price="$2" stock={true}/>
-            <ProductRow name="Pumpkin" price="$4" stock={false} />
-            <ProductRow name="Peas" price="$1" stock={true} />
+            
 
         </table>
     )
