@@ -7,7 +7,10 @@ const productData = [
     { category: "Fruits", price: "$2", stocked: false, name: "Passionfruit" },
     { category: "Vegetables", price: "$2", stocked: true, name: "Spinach" },
     { category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin" },
-    { category: "Vegetables", price: "$1", stocked: true, name: "Peas" }
+    { category: "Vegetables", price: "$1", stocked: true, name: "Peas" },
+    { category: "Drinks", price: "$1.5", stocked: true, name: "Milk" },
+    { category: "Drinks", price: "$1.8", stocked: false, name: "Coke" },
+    { category: "Bread", price: "$0.5", stocked: false, name: "White Bread" },
 ]
 
 function Stock() {
