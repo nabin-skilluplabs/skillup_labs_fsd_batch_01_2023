@@ -19,9 +19,14 @@ function FiltarableProductTable({productData}) {
 
     }
 
+    function searchProduct(event) {
+        const query = event.target.value;
+        console.log(query);
+    }
+
     return (
         <div className="mt-10 w-96 place-self-center p-4 bg-slate-300">
-            <SearchBar filterStocked={filterStocked} />
+            <SearchBar searchProduct={searchProduct} filterStocked={filterStocked} />
             <ProductTable productData={currentProducts} />
             
         </div>
