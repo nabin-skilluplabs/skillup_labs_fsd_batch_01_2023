@@ -3,19 +3,27 @@ import SearchBar from "./SearchBar";
 import { useState } from "react";
 function FilterableProductTable({ productData }) {
     const [currentProducts, setCurrentProducts] = useState(productData);
+    const [isStocked, setIsStocked] = useState(false);
+    const [query, setQuery] = useState("")
     function filterStocked(event) {
         const isChecked = event.target.checked;
         if (isChecked) {
             const filteredProducts = productData.filter(product => product.stocked);
             setCurrentProducts(filteredProducts);
+            setIsStocked(true);
         }
         else {
             setCurrentProducts(productData);
+            setIsStocked(false);
         }
     }
     function searchProduct(event) {
         const query = event.target.value;
-        const filteredProducts = currentProducts.filter(product => product.name.toLowerCase().indexOf(query.toLowerCase()) >= 0);
+        setQuery(query);
+        let filteredProducts = productData.filter(product => product.name.toLowerCase().indexOf(query.toLowerCase()) >= 0);
+        if (isStocked) {
+            filteredProducts = filteredProducts.filter(product => product.stocked);
+        }
         setCurrentProducts(filteredProducts)
     }
 
