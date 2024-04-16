@@ -1,3 +1,4 @@
+import React from "react";
 import ProductCategoryRow from "./ProductCatergoryRow";
 import ProductRow from "./ProductRow";
 
@@ -15,15 +16,20 @@ function ProductTable({productData}) {
                 <th className="p-1">Name</th>
                 <th className="text-left p-1">Price</th>
             </tr>
-            <ProductCategoryRow category="fruits" />
-            <ProductRow name="Apple" price="$1" stock={true} />
-            <ProductRow name="Dragonfruit" price="$1" stock={true} />
-            <ProductRow name="Passionfruit" price="$1" stock={false} />
-            <ProductCategoryRow category="Vegetables" />
-            <ProductRow name="Spinach" price="$2" stock={true} />
-            <ProductRow name="pumkin" price="$2" stock={true} />
-            <ProductRow name="peas" price="$3" stock={false} />
-            <ProductRow />
+            {
+                categories.map((category, index) => (
+                    <React.Fragment key={`cat_${index}`}>
+                        <ProductCategoryRow category={category} />
+                        {
+                            productData.filter(product => product.catergory === category).map((product, pIndex) => (
+                                <ProductRow key={`product_${pIndex}`} name={product} price={product.price} stock={product.stocked} />
+                            ))
+                        }
+                    </React.Fragment>
+                    
+                ))
+            }
+            
         </table>
     );
 }

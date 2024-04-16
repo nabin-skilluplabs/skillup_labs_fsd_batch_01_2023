@@ -1,7 +1,8 @@
 import ProductCategoryRow from "./ProductCatergoryRow";
 import ProductTable from "./ProductTable";
 import SearchBar from "./SearchBar";
-function FiltarableProductTable({produtData}) {
+
+function FiltarableProductTable({productData}) {
     return (
         <div className="mt-10 w-96 place-self-center p-4 bg-slate-300">
             <SearchBar />
