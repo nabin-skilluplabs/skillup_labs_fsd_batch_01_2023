@@ -12,10 +12,9 @@ const productData = [
 ];
 function Stock() {
   return (
-    <div>
+    <div className="flex flex-col">
       <Header appName="Stock Management" />
       <FilterableProductTable productData={productData} />
-      <ProductTable />
     </div>
   );
 }
