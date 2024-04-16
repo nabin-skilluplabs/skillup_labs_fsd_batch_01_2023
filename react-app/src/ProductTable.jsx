@@ -21,8 +21,8 @@ function ProductTable({productData}) {
                     <React.Fragment key={`cat_${index}`}>
                         <ProductCategoryRow category={category} />
                         {
-                            productData.filter(product => product.catergory === category).map((product, pIndex) => (
-                                <ProductRow key={`product_${pIndex}`} name={product} price={product.price} stock={product.stocked} />
+                            productData.filter(product => product.category === category).map((product, pIndex) => (
+                                <ProductRow key={`product_${pIndex}`} name={product.name} price={product.price} stock={product.stocked} />
                             ))
                         }
                     </React.Fragment>
