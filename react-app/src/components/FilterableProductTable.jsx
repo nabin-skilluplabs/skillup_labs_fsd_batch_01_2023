@@ -1,15 +1,14 @@
 /* eslint-disable react/prop-types */
 import SearchBar from "./SearchBar";
 import ProductTable from "./ProductTable";
+import { useState } from "react";
 
 function FilterableProductTable({ productData }) {
   const [currentProducts, setCurrentProducts] = useState(productData);
   function filterStocked(event) {
     const isChecked = event.target.checked;
     if (isChecked) {
-      const filteredProcucts = ProductTable.filter(
-        (product) => product.stocked
-      );
+      const filteredProcucts = productData.filter((product) => product.stocked);
       setCurrentProducts(filteredProcucts);
     } else {
       setCurrentProducts(productData);
