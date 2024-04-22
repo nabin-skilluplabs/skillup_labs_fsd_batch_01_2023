@@ -1,6 +1,6 @@
 function Profile(){
     return(
-        <img src="../assets/images/istockphoto-183104619-612x612.jpg" alt="" />
+        <img src="https://unsplash.com/photos/a-light-house-sitting-on-top-of-a-pier-next-to-the-ocean-xuQkHHnzykY" alt="" />
     )
 }
 export default Profile;

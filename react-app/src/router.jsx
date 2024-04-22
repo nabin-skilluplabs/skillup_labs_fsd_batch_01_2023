@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         element: <ToDoApp />
       },
       {
-        path: "/describinh-the-ui",
+        path: "/describing-the-ui",
         element: <DescribingTheUI />
       }
   ]);
