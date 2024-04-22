@@ -13,6 +13,10 @@ export default function App(){
         {
             title: "Stock Management",
             path: "/stock"
+        },
+        {
+            title: "ToDo Application",
+            path: "/todoapp"
         }
     ]
     return (

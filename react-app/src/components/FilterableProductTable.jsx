@@ -6,22 +6,38 @@ import { useState } from "react";
 
 function FilterableProductTable({productData}){
     const [currentProducts, setCurrentProducts] = useState(productData)
+    const [isStocked, setIsStocked] = useState(false);
+    const[query, setQuery] = useState(true)
     function filterStocked(event){
         const isChecked = event.target.checked;
         if(isChecked){
             const filterdProduct = productData.filter(product => product.stocked);
             setCurrentProducts(filterdProduct);
+            setIsStocked(true)
         }else{
             setCurrentProducts(productData);
+            setIsStocked(false)
         }
       
 
     }
 
+    // function filterProduct(){
+    //     let filterdProduct = productData.filter(product =>   product.name.toLowerCase().indexOf(query.toLowerCase()) >= 0)
+    //    if(){
+    //    filterdProduct =  filterdProduct.filter(product => product.stocked)
+    //    }
+    //     setCurrentProducts(filterdProduct)
+    // }
+
     function searchProducts(event){
         const query = event.target.value;
-        // eslint-disable-next-line no-console
-        console.log(event)
+        setQuery(query)
+       let filterdProduct = productData.filter(product =>   product.name.toLowerCase().indexOf(query.toLowerCase()) >= 0)
+       if(isStocked){
+       filterdProduct =  filterdProduct.filter(product => product.stocked)
+       }
+        setCurrentProducts(filterdProduct)
     }
     return(
         <div  className=" w-96 mt-10 place-self-center bg-gray-100  border">
