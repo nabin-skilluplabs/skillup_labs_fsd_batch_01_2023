@@ -14,6 +14,10 @@ export default function App() {
       title: "Stock Management",
       path: "/Stock",
     },
+    {
+      title: "Describing the Ui",
+      path: "/pages/DescribingTheUI",
+    },
   ];
   return (
     <div className="text-center">
