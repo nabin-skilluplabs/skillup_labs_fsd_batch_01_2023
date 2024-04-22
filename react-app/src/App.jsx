@@ -13,6 +13,10 @@ export default function App() {
         {
             title: "Sock Management",
             path: "/stock"
+        },
+        {
+            title: "Describing The UI",
+            path: "/describing-the-ui"
         }
     ];
     return(

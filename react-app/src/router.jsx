@@ -4,8 +4,8 @@ import {
 
 import App from './App';
 import Counter from './Counter';
-import Stock from './Stock'
-
+import Stock from './Stock';
+import DescribingTheUI from "./pages/DescribingTheUI";
 
 const router = createBrowserRouter([
     {
@@ -19,6 +19,10 @@ const router = createBrowserRouter([
     {
         path: "/stock",
         element: <Stock />,
+      },
+      {
+        path: "/describing-the-ui",
+        element: <DescribingTheUI />,
       },
   ]);
 
