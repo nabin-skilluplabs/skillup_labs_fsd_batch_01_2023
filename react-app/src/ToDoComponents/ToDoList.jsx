@@ -1,21 +1,12 @@
 /* eslint-disable no-undef */
+import Items from "./Items";
 
 function ToDoList(){
+
     return (
-        <div>
-            <ul>
-                <ol>
-                    <input type="text" name="task" id="" />
-                </ol>
-                <ol>
-                    <input type="text" name="task" id="" />
-                </ol>
-                <ol>
-                    <input type="text" name="task" id="" />
-                </ol>
-              
-            </ul>
-        </div>
+        <ol className=" border-black-500">
+            <Items/>
+        </ol>
     )
 }
 export default ToDoList;
