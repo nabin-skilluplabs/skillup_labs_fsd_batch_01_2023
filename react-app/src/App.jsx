@@ -16,11 +16,11 @@ export default function App() {
             title: "Stock Management",
             path: "/stock"
         },
-         
+
         {
-            title: "Describing The UI",
-            path: "/Describing-the-ui"
-        },
+            title: "News",
+            path: "/news"
+        }
 
     ];
     return(

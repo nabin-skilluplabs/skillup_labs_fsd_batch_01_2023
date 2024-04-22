@@ -7,6 +7,7 @@ import App from './App.jsx';
 import Counter from './Counter.jsx';
 import Stock from "./Stock.jsx";
 import DescribingTheUI from "./pages/DescribingTheUI.jsx";
+import News from "./pages/News.jsx";
 
 
 
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
       path: "/describing-the-ui",
       element: <DescribingTheUI />,
     },
+
+    {
+      path: "/news",
+      element: <News />
+    }
 
   ]);
 
