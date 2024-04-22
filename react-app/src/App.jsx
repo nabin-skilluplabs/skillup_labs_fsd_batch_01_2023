@@ -17,7 +17,12 @@ export default function App(){
         {
             title: "ToDo Application",
             path: "/todoapp"
+        },
+        {
+            title: "Describing the UI",
+            path: "/describing-the-ui"
         }
+
     ]
     return (
         <div className="text-center"> 

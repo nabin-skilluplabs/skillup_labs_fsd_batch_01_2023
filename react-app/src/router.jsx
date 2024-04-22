@@ -2,6 +2,7 @@ import App from './App.jsx'
 import Counter from './Counter.jsx'
 import Stock  from './Stock.jsx';
 import ToDoApp from './ToDoApp.jsx';
+import DescribingTheUI from './pages/DescribingTheUI.jsx';
 
 import {
     createBrowserRouter,
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/todoapp",
         element: <ToDoApp />
+      },
+      {
+        path: "/describinh-the-ui",
+        element: <DescribingTheUI />
       }
   ]);
   export default router;
