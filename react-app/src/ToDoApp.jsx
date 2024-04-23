@@ -1,21 +1,26 @@
-import React from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState } from "react";
 import ToDoHero from "./ToDoComponents/ToDoHero";
 import Form from "./ToDoComponents/Form";
+import Header from "./ToDoComponents/Header";
 import ToDoList from "./ToDoComponents/ToDoList";
-function ToDoApp(){
-    const[todos, setTodos] = React.useState([
-        {title: "Some task", id:self.crypto.randomUUID(), isCompleted:false},
-        {title: "Some other task", id:self.crypto.randomUUID(), isCompleted:true},
-        {title: "last task", id:self.crypto.randomUUID(), isCompleted:false}
-    ])
+import "./assets/style.css";
 
 
-    return(
-        <div className=" text-center m-auto w-6/12 border-black bg-gray-400  flex-col  justify-center items-center h-2/4">
-            <ToDoHero />
-            <Form />
-            <ToDoList todos={todos} />
-        </div>
-    )
+function ToDoApp() {
+  const [todos, setTodos] = useState([]);
+  const todos_completed = todos.filter(
+    (todo) => todo.isCompleted === true
+  ).length;
+  const total_todos = todos.length;
+  
+  return (
+    <div className="wrapper">
+      <Header />
+      <ToDoHero todos_completed={todos_completed} total_todos={total_todos} />
+      <Form setTodos={setTodos} />
+      <ToDoList todos={todos} setTodos={setTodos} />
+    </div>
+  );
 }
 export default ToDoApp;

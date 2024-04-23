@@ -1,22 +1,32 @@
-/* eslint-disable no-unused-vars */
-function Form(){
+/* eslint-disable react/prop-types */
+function Form({setTodos}){
+    const handelSubmit = (event)=>{
+        event.preventDefault();
+        const value = event.target.todo.value;
+        setTodos((prevTodos)=>[
+            ...prevTodos,
+            {title:value, id:self.crypto.randomUUID(), isCompleted:false}
+        ]);
 
-        const handelSubmit= (event) =>{
-            event.preventDefault();
-            event.reset.target();
-        };
-        return(
-        <form action="#" className=" border-black w-1/3 mx-auto my-0">
-            <label htmlFor="inputList">
-                <input className=" text-white p-1 mt-6 bg-blue-950 rounded-md border-blue-600 m-auto mr-4" type="text" name="inputList" id="inputList" placeholder="Write your next task" />
+        
+        event.target.reset();
+        // To Reset the Form
+    }
+    return (
+        <form className="form" onSubmit = {handelSubmit}>
+            <label htmlFor="todo">
+                <input type="text" name="todo" id="todo" placeholder="Write your next task" />
             </label>
-            <button className=" bg-green-400 rounded-full w-8 h-8">
+           <button>
+                <span className="visually hidden">
+                    Submit
+                </span>
                 +
-            </button>
-
-
+                <svg>
+                 <path d="" />
+                </svg>
+           </button>
         </form>
-    )
-    
+    );
 }
 export default Form;

@@ -7,6 +7,7 @@ import DescribingTheUI from './pages/DescribingTheUI.jsx';
 import {
     createBrowserRouter,
   } from "react-router-dom";
+import News from './pages/News.jsx';
   
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/describing-the-ui",
         element: <DescribingTheUI />
+      },
+      {
+        path: "/news",
+        element: <News />
       }
   ]);
   export default router;

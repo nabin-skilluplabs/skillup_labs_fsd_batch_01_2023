@@ -21,6 +21,10 @@ export default function App(){
         {
             title: "Describing the UI",
             path: "/describing-the-ui"
+        },
+        {
+            title: "News",
+            path: "/news"
         }
 
     ]
