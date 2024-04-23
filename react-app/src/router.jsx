@@ -6,6 +6,7 @@ import App from './App';
 import Counter from './Counter';
 import Stock from './Stock';
 import DescribingTheUI from "./pages/DescribingTheUI";
+import News from "./pages/News";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/describing-the-ui",
         element: <DescribingTheUI />,
+      },
+      {
+        path: "/news",
+        element: <News />,
       },
   ]);
 
