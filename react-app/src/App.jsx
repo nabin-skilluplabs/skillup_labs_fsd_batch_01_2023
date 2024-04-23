@@ -17,6 +17,10 @@ export default function App() {
         {
             title: "Describing The UI",
             path: "/describing-the-ui"
+        },
+        {
+            title: "Enrollment Form",
+            path: "/enrollment-form"
         }
     ];
     return(

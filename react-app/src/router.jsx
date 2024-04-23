@@ -7,6 +7,7 @@ import Counter from './Counter';
 import Stock from './Stock';
 import DescribingTheUI from "./pages/DescribingTheUI";
 import News from "./pages/News";
+import EnrollmentForm from "./pages/EnrollmentForm";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/news",
         element: <News />,
+      },
+      {
+        path: "/enrollment-form",
+        element: <EnrollmentForm />,
       },
   ]);
 
