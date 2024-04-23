@@ -8,6 +8,7 @@ import Counter from './Counter.jsx';
 import Stock from "./Stock.jsx";
 import DescribingTheUI from "./pages/DescribingTheUI.jsx";
 import News from "./pages/News.jsx";
+import EnrollmentForm from "./pages/EnrollmentForm.jsx";
 
 
 
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
     {
       path: "/news",
       element: <News />
+    },
+
+    {
+      path: "/enrollment-form",
+      element: <EnrollmentForm />
     }
 
   ]);
