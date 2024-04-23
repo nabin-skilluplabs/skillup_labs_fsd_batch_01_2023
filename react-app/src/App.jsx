@@ -25,6 +25,10 @@ export default function App(){
         {
             title: "News",
             path: "/news"
+        },
+        {
+            title: "Student Elrollment Form",
+            path: "/enrollmentform"
         }
 
     ]
