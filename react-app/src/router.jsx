@@ -3,11 +3,13 @@ import Counter from './Counter.jsx'
 import Stock  from './Stock.jsx';
 import ToDoApp from './ToDoApp.jsx';
 import DescribingTheUI from './pages/DescribingTheUI.jsx';
+import EnrollmentForm from './pages/EnrollmentForm.jsx';
 
 import {
     createBrowserRouter,
   } from "react-router-dom";
 import News from './pages/News.jsx';
+
   
 
 const router = createBrowserRouter([
@@ -34,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/news",
         element: <News />
+      },
+      {
+        path: "/enrollmentform",
+        element: <EnrollmentForm />
       }
   ]);
   export default router;
