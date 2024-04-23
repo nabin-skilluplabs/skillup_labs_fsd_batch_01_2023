@@ -4,6 +4,9 @@ import App from "./App";
 import Counter from "./Counter";
 import Stock from "./Stock";
 import DescribingTheUI from "./pages/DescribingTheUI";
+import News from "./pages/News";
+import ToDoApp from "./ToDoApp";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,8 +21,16 @@ const router = createBrowserRouter([
     element: <Stock />,
   },
   {
-    path: "/pages/describingtheui",
+    path: "/describingtheui",
     element: <DescribingTheUI />,
+  },
+  {
+    path: "/news",
+    element: <News />,
+  },
+  {
+    path: "/todoapp",
+    element: <ToDoApp />,
   },
 ]);
 

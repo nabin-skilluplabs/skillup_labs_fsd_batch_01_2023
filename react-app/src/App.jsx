@@ -16,7 +16,15 @@ export default function App() {
     },
     {
       title: "Describing the Ui",
-      path: "/pages/DescribingTheUI",
+      path: "describingtheui",
+    },
+    {
+      title: "News",
+      path: "/news",
+    },
+    {
+      title: "To-Do App",
+      path: "/todoapp",
     },
   ];
   return (

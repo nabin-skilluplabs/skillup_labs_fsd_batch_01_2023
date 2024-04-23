@@ -6,7 +6,7 @@ import { useState } from "react";
 function FilterableProductTable({ productData }) {
   const [currentProducts, setCurrentProducts] = useState(productData);
   const [isStocked, setIsStocked] = useState(false);
-  const [query, setQuery] = useState();
+  const [query, setQuery] = useState(true);
 
   function filterStocked(event) {
     const isChecked = event.target.checked;
