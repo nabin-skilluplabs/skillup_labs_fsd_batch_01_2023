@@ -18,7 +18,7 @@ function News() {
     authorName: "BEAU CARNES",
     authorProfile: "https://www.freecodecamp.org/news/content/images/size/w30/2021/05/beau-carnes-gravatar.jpeg",
     addedDate: "2 DAYS AGO",
-    category: "Learn WebSockets with Socket.IO"
+    category: "Learn WebSockets with Socket.IO Learn WebSockets with Socket.IO"
   },
 
   {

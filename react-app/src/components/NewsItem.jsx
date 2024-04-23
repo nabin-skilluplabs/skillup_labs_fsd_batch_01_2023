@@ -5,8 +5,8 @@ function NewsItem({ newsItem }) {
       <div>
         <img className="w-64" src={newsItem.banner} />
       </div>
-      <div className="flex flex-col basis-1/3">
-        <div className="flex flex-col">
+      <div className="flex flex-col basis-1/2 gap-9">
+        <div className="flex flex-col gap-2">
           <div>
             <h3>{newsItem.title}</h3>
           </div>
