@@ -13,6 +13,10 @@ export default function App() {
         {
             title: "Stock",
             path: "/stock"
+        },
+        {
+            title: "EnrollmentForm",
+            path: "/enrollment"
         }
     ]
 
