@@ -19,14 +19,14 @@ function EnrollmentForm(){
         formState: {errors},
     } = useForm()
 
-
+                      
     function onSubmit(data){
         console.log(data);
-        console.log(formSchema);
+                                                                
     }
-    
+                                                                                                                                       
     return(
-        <div>
+        <div>                                                                                                                                                                                                                                                                                                                                                                                        
             <h1>Studnet Enrollment Form</h1>
             <h2>Personal Information </h2>
 

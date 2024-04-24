@@ -1,0 +1,13 @@
+User Stories for immunization tracking for baby
+
+
+1. Login/Signup
+2. multiple profile
+3. track the vital's  health 
+4. immunization tracking with the age(upcomming)
+5. Due if any missed
+6.tracking for infectious Diseases
+7.Doctor's information
+8. Track appointments(upcomming, passed)
+9. Medication tracking
+10. Medication providers history.
