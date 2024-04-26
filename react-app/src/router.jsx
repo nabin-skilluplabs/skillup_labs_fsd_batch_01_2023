@@ -9,6 +9,7 @@ import Stock from "./Stock.jsx";
 import DescribingTheUI from "./pages/DescribingTheUI.jsx";
 import News from "./pages/News.jsx";
 import EnrollmentForm from "./pages/EnrollmentForm.jsx";
+import ToDoApp from "./pages/ToDoApp.jsx";
 
 
 
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
     {
       path: "/enrollment-form",
       element: <EnrollmentForm />
+    },
+
+    {
+      path: "/to-do-app",
+      element: <ToDoApp />
     }
 
   ]);

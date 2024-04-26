@@ -25,6 +25,11 @@ export default function App() {
         {
             title: "Enrollment Form",
             path: "/enrollment-form"
+        },
+
+        {
+            title: "To Do List",
+            path: "/to-do-app"
         }
 
     ];
