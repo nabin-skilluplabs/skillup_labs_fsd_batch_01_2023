@@ -1,7 +1,7 @@
 // eslint-disable-next-line react/prop-types
 function Button({symbol, action, bg}) {
     return(
-        <button onClick={action} className={`${bg} p-8 rounded text-4xl`}>{symbol}</button>
+        <button onClick={action} className={`${bg} px-2 py-4 rounded text-2xl`}>{symbol}</button>
     )
 }
 

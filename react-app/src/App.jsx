@@ -38,7 +38,7 @@ export default function App() {
             <Header appName="React App" />
             {
                 apps.map((app, index) => (
-                    <a className="text-amber-500 block py-3" key={index} href={app.path}>{app.title}</a>
+                    <a className="block text-amber-500 py-3" key={index} href={app.path}>{app.title}</a>
                 ))
             }
         </div>
