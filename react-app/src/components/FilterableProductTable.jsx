@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import SearchBar from "./SearchBar";
 import ProductTable from "./ProductTable";

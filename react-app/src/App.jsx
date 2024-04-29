@@ -26,6 +26,10 @@ export default function App() {
       title: "To-Do App",
       path: "/todoapp",
     },
+    {
+      title: "Enrollment Form",
+      path: "/enrollment-form",
+    },
   ];
   return (
     <div className="text-center">

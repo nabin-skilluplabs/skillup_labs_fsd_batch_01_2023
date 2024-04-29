@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 function Form({ setTodos }) {
   const handleSubmit = (event) => {
     event.preventDefault();

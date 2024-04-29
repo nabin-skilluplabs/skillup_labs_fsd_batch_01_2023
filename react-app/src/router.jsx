@@ -6,6 +6,7 @@ import Stock from "./Stock";
 import DescribingTheUI from "./pages/DescribingTheUI";
 import News from "./pages/News";
 import ToDoApp from "./ToDoApp";
+import EnrollmentForm from "./pages/EnrollmentForm";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/todoapp",
     element: <ToDoApp />,
+  },
+  {
+    path: "/enrollment-form",
+    element: <EnrollmentForm />,
   },
 ]);
 

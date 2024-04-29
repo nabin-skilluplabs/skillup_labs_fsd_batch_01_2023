@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 function ToDoHero({ todos_completed, total_todos }) {
   return (
     <section className="todohero_section">
