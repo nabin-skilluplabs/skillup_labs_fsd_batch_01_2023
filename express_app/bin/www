@@ -8,7 +8,7 @@ import app from'../app.js';
 import debug from'debug';
 import http from 'http';
 import dotenv from 'dotenv';
-
+debug('express-app-server');
 dotenv.config();
 
 
