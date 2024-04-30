@@ -10,6 +10,8 @@ import DescribingTheUI from "./pages/DescribingTheUI.jsx";
 import News from "./pages/News.jsx";
 import EnrollmentForm from "./pages/EnrollmentForm.jsx";
 import ToDoApp from "./pages/ToDoApp.jsx";
+import Students from "./pages/Students.jsx";
+
 
 
 
@@ -46,6 +48,11 @@ const router = createBrowserRouter([
     {
       path: "/to-do-app",
       element: <ToDoApp />
+    },
+
+    {
+      path: "/students",
+      element: <Students />
     }
 
   ]);

@@ -30,6 +30,11 @@ export default function App() {
         {
             title: "To Do List",
             path: "/to-do-app"
+        },
+
+        {
+            title: "Students",
+            path: "/students"
         }
 
     ];
