@@ -8,6 +8,7 @@ import Stock from './Stock';
 import DescribingTheUI from "./pages/DescribingTheUI";
 import News from "./pages/News";
 import EnrollmentForm from "./pages/EnrollmentForm";
+import Students from "./pages/Students";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/enrollment-form",
         element: <EnrollmentForm />,
+      },
+      {
+        path: "/students",
+        element: <Students />,
       },
   ]);
 

@@ -7,6 +7,7 @@ import logger from  'morgan';
 
 import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
+import studentsRouter from './routes/students.js';
 
 var app = express();
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/students', studentsRouter);  
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
