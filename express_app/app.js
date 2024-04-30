@@ -8,12 +8,13 @@ import indexRouter from './routes/index.js';
 import userRouter from './routes/users.js'
 import studentsRouter from './routes/students.js'
 import { fileURLToPath } from 'url';
+import cors from 'cors';
 
 const _filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(_filename);
 
 var app = express();
-
+app.use(cors());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

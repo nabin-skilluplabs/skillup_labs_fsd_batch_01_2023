@@ -4,6 +4,7 @@ import Stock  from './Stock.jsx';
 import ToDoApp from './ToDoApp.jsx';
 import DescribingTheUI from './pages/DescribingTheUI.jsx';
 import EnrollmentForm from './pages/EnrollmentForm.jsx';
+import Students from './pages/Students.jsx'
 
 import {
     createBrowserRouter,
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/enrollmentform",
         element: <EnrollmentForm />
+      },
+      {
+        path: "/students",
+        element: <Students />
       }
   ]);
   export default router;

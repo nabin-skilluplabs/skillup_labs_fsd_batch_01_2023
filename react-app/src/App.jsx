@@ -32,7 +32,7 @@ export default function App(){
         },
         {
             title: "Students Data",
-            path: "/students"
+            path:"/students"
         }
     ]
     return (
