@@ -25,6 +25,7 @@ export default function App() {
     ];
     return(
         <div className="text-center">
+            <div className="flex justify-center my-4"><img src="/images/vite.svg" alt="" /></div>
             <Header appName="React Apps" />
             {
                 apps.map((app, index) => (
