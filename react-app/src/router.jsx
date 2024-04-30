@@ -7,6 +7,7 @@ import DescribingTheUI from "./pages/DescribingTheUI";
 import News from "./pages/News";
 import ToDoApp from "./ToDoApp";
 import EnrollmentForm from "./pages/EnrollmentForm";
+import Student from "./pages/Student";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: "/enrollment-form",
     element: <EnrollmentForm />,
+  },
+  {
+    path: "/student",
+    element: <Student />,
   },
 ]);
 

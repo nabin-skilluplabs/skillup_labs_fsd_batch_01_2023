@@ -1,12 +1,12 @@
 import { useForm } from "react-hook-form";
-import {object, string} from 'yup';
+import { object, string } from "yup";
 
-let formSchema = object() {
-    fullName: string().required('This field is required'),
-    email: string().email('Invalid email address'),
-    mobile: string().required('Mobile is required'),
-    address: string.required('Address ')
-}
+// let formSchema = object() {
+//     fullName: string().required('This field is required'),
+//     email: string().email('Invalid email address'),
+//     mobile: string().required('Mobile is required'),
+//     address: string.required('Address ')
+// };
 
 function EnrollmentForm() {
   const {
