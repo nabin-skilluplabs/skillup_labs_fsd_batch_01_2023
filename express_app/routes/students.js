@@ -21,6 +21,18 @@ router.get('/', function(req, res, next) {
             email: 'utsav@gmail.com', 
             mobile: '0450713283',
             intro: 'Suraj is a nice guy'
+        },
+        {
+            name: 'John  Cena',
+            email: 'utsav@gmail.com', 
+            mobile: '0450713283',
+            intro: 'Suraj is a nice guy'
+        },
+        {
+            name: 'Andrew Jackson',
+            email: 'utsav@gmail.com', 
+            mobile: '0450713283',
+            intro: 'Suraj is a nice guy'
         }
     ]
   res.json({data: studentsRecord});
