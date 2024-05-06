@@ -4,10 +4,10 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 
 let formSchema = object({
-    fullName: string().required('This field is required!'),
-    email: string().email('Invalid email address!'),
+    name: string().required('This field is required!'),
+    email: string().required('Email is required!').email('Invalid email address!'),
     mobile: string().required('Mobile is required!'),
-    address: string().required('Address is required!'),
+    addres: string().required('Address is required!'),
   });
 
 function EnrollmentForm() {
@@ -19,11 +19,18 @@ function EnrollmentForm() {
       } = useForm({
         resolver: yupResolver(formSchema),
       });
-
-      console.log(errors);
     
-    function onSubmit(data) {
-        console.log(data);
+    async function onSubmit(data) {
+       const response = await fetch('http://localhost:3005/students', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+       });
+
+
+       console.log(response);
     }
 
     return (
@@ -34,8 +41,8 @@ function EnrollmentForm() {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div>
                     <label>Full Name*</label>
-                    <input className="border" type="text"  {...register("fullName")} />
-                    {errors.fullName && <span className="text-sm text-red-500">{errors.fullName.message}</span>}
+                    <input className="border" type="text"  {...register("name")} />
+                    {errors.name && <span className="text-sm text-red-500">{errors.name.message}</span>}
                 </div>
                 <div>
                     <label>Email*</label>
@@ -49,8 +56,8 @@ function EnrollmentForm() {
                 </div>
                 <div>
                     <label>Residential Address*</label>
-                    <textarea className="border"   {...register("address")} ></textarea>
-                    {errors.address && <span className="text-sm text-red-500">{errors.address.message}</span>}
+                    <textarea className="border"   {...register("addres")} ></textarea>
+                    {errors.addres && <span className="text-sm text-red-500">{errors.addres.message}</span>}
                 </div>
 
                 <div>

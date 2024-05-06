@@ -21,6 +21,10 @@ export default function App() {
         {
             title: "Enrollment Form",
             path: "/enrollment-form"
+        },
+        {
+            title: "Students",
+            path: "/students"
         }
     ];
     return(
