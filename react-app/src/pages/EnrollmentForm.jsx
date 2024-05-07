@@ -1,63 +1,76 @@
-// import {useForm} from "react-hook-form";
-// import {object, String} from 'yup';
-// import { yupResolver } from '@hookform/resolvers/yup';
+/* eslint-disable no-unused-vars */
+import { useForm } from "react-hook-form";
 
-function EnrollmentForm(){
-//     let formSchema = object({
-//         fullName: String().required('This field is required'),
-//         email: String().email('Invalid email address!'),
-//         mobile: String().required("Mobile is required"),
-//         address: String().required("Address is requird"),
-//         resolver: yupResolver(formSchema)
+// let formSchema = object() {
+//     fullName: string().required('This field is required'),
+//     email: string().email('Invalid email address'),
+//     mobile: string().required('Mobile is required'),
+//     address: string.required('Address ')
+// };
 
+function EnrollmentForm() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
 
-//     })
-//     const{
-//         register,
-//         handleSubmit,
-//         watch, 
-//         formState: {errors},
-//     } = useForm()
+  async function onSubmit(data) {
+    const response = await fetch({'http://loclahost/3005/students',{
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+    
 
-                      
-//     function onSubmit(data){
-//         console.log(data);
-                                                                
-//     }
-                                                                                                                                       
-//     return(
-//         <div>                                                                                                                                                                                                                                                                                                                                                                                        
-//             <h1>Studnet Enrollment Form</h1>
-//             <h2>Personal Information </h2>
+       
+       
+    })
 
-//             <form onSubmit={handleSubmit(onSubmit)} action="">
-//               <div>
-//                 <label htmlFor="name">Full Name</label>
-//                 <input className="border" type="text"  {...register("fullName")} />
-                
-//               </div>
-//               <div>
-//                 <label htmlFor="email">Email</label>
-//                 <input className="border" type="email" {...register("email")} />
-//               </div>
-//               <div>
-//                 <label htmlFor="">Mobiles</label>
-//                 <input className="border" type="text" {...register("mobile")}/>
-//               </div>
-//               <div>
-//                 <label htmlFor="">Residential Address</label>
-//                 <textarea className="border" name="address" id="" cols="30" rows="10" {...register("address")}></textarea>
-//               </div>
-//               <div>
-//                     <input className="border  " type="submit" value="Enroll Now" />
-//                     <input className="border bg-gray-500 text-white" type="reset" value="Reset" />
-//               </div>
+    
+  }
+  return (
+    <div>
+      <h1>Student Enrollment Form</h1>
+      <h2>Personal Information</h2>
 
-//             </form>
-//         </div>
-//     )
-return(
-    <h1>Hello</h1>
-)}
-// }
- export default EnrollmentForm;
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div>
+          <label htmlFor="name">Full Name*</label>
+          <input className="border-2" type="text" {...register("fullName")} />
+        </div>
+        <div>
+          <label htmlFor="email">Email*</label>
+          <input className="border-2" type="text" {...register("email")} />
+        </div>
+        <div>
+          <label htmlFor="mobile">Mobiles*</label>
+          <input className="border-2" type="text" {...register("mobile")} />
+        </div>
+        <div>
+          <label htmlFor="address">Residential Address</label>
+          <textarea
+            className="border-2"
+            name="address"
+            id="address"
+            cols="30"
+            rows="2"
+            {...register("address")}
+          ></textarea>
+        </div>
+        <div className="flex gap-2 items-center">
+          <input
+            className="border-2 text-white bg-slate-700 px-5 py-0 text-center rounded-3xl"
+            type="submit"
+            value="Enroll Now"
+          />
+          <input className="border-2" type="reset" value="Reset" />
+        </div>
+      </form>
+    </div>
+  );
+}
+
+export default EnrollmentForm;

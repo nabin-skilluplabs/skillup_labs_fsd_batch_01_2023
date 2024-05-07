@@ -38,5 +38,9 @@ router.get('/', function(req, res, next) {
   res.json({data: studentsRecord});
 });
 
+router.post('/', async function(req, res, next){
+    console.log(req.data);
+    res.json({})
+})
 
 export default router
