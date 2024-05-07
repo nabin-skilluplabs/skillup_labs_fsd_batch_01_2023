@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
 
 let formSchema = object({
-  fullName: string().required("This field is required!"),
+  name: string().required("This field is required!"),
   email: string().required("email is required").email("Invalid email address!"),
   mobile: string().required("Mobile is required!"),
   address: string().required("Address is required!"),
@@ -24,11 +24,10 @@ function EnrollmentForm() {
   async function onSubmit(data) {
     const response = await fetch("http://localhost:3005/students", {
       method: "post",
-      body: data,
+      body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
     });
 
     if (response.status === 200) {
@@ -44,7 +43,7 @@ function EnrollmentForm() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label>Full Name*</label>
-          <input className="border" type="text" {...register("fullName")} />
+          <input className="border" type="text" {...register("name")} />
         </div>
         <div>
           <label>Email*</label>

@@ -6,19 +6,12 @@ var router = express.Router();
 
 /* GET students listing. */
 router.get("/", async function (req, res, next) {
-  // const studentsRercord = await fs.readFileSync(
-  //   "./data/students.json",
-  //   "utf-8"
-  // );
   const studentsRecord = await prisma.student.findMany();
   res.json({ data: studentsRecord });
 });
 
 router.get("/:id", async function (req, res, next) {
-  const studentData = req.body;
   const id = req.params.id && parseInt(req.params.id);
-
-  const { id_, ...data } = studentData;
   if (!id) {
     return res.status(404).send(`No student found`);
   }
