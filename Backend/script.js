@@ -2,26 +2,20 @@ import express from 'express'
 const app = express()
 
 app.set("view engine", 'ejs');
-//middleware
-app.use(function(req, res, next){
-  next();
-});
-a
+
+app.use(express.static('./public'))
+
 app.get('/', function (req, res) {
-  res.send('Hello World')
+  res.render("index")
 })
-
-//route parameters
-// dynamic routing
-
-  app.get('/Profile/:username', function (req, res) {
-    res.send(`Hello form ${req.params.username}`)
-  })
+function errorHandler (err, req, res, next) {
+  if (res.headersSent) {
+    return next(err)
+  }
+  res.status(500)
+  res.render('error', { error: err })
+}
 app.listen(3000)
-
-
-//Template engine
-
 
 
 //ejs setup 

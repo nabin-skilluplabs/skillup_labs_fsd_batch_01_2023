@@ -1,0 +1,155 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #1f3049;
+  background-color: black;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  overflow: hidden;
+  filter: blur(170px);
+}
+.blob:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(to right, #fff, cyan);
+  transform: rotate(0deg);
+  animation: rotate 2s infinite linear;
+  z-index: -10;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+.container {
+  width: min(100% - 2rem, 60rem);
+  margin-inline: auto;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.pricing-title {
+  font-size: 3.75rem;
+  color: #fff;
+  margin-bottom: 2.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.pricing-title span {
+  color: cyan;
+}
+
+.pricing-plans {
+  border: 0.25rem solid cyan;
+  display: flex;
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem cyan;
+  z-index: 10;
+}
+
+.button {
+  padding: 1em 1.5em;
+  justify-self: center;
+  background: cyan;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+.button:hover, .button:focus {
+  color: #fff;
+  background: rgba(31, 48, 73, 0.8);
+}
+
+.inverted {
+  background: black;
+  color: #fff;
+  box-shadow: 0 0 2rem #fff;
+}
+
+.tier {
+  flex: 1;
+  padding: 2.25rem;
+  display: grid;
+  gap: 1.25rem;
+  border-radius: 1rem;
+  color: #fff;
+}
+.tier:nth-child(2) {
+  transform: scale(1.15);
+  /* Adjust as needed */
+  position: relative;
+  z-index: 15;
+  /* To make sure it overlaps the other tiers */
+  border: 0.25rem solid white;
+}
+.tier__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: cyan;
+}
+.inverted .tier__title {
+  color: #fff;
+}
+.tier__list-item:not(:last-child):before {
+  content: "";
+  display: block;
+  border: 1px solid rgba(0, 255, 255, 0.5);
+  margin-block: 1.25rem;
+}
+.inverted .tier__list-item:not(:last-child):before {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.tier__price {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.tier__price span {
+  font-size: 1.3125rem;
+  font-weight: normal;
+}
+.tier__feature-list {
+  list-style: none;
+}

@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useForm } from "react-hook-form";
+import {useNavigate} from "react-router-dom";
 
 // let formSchema = object() {
 //     fullName: string().required('This field is required'),
@@ -9,27 +10,28 @@ import { useForm } from "react-hook-form";
 // };
 
 function EnrollmentForm() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     watch,
-    formState: { errors },
+    formState: { errors }
   } = useForm();
 
   async function onSubmit(data) {
-    const response = await fetch({'http://loclahost/3005/students',{
+    const response = await fetch('http://loclahost/3005/students',{
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
             // 'Content-Type': 'application/x-www-form-urlencoded',
           },
-    
-
+          body: JSON.stringify(data)
        
-       
-    })
+    });
 
-    
+    if (response.status === 200){
+      return navigate('/students');
+    }
   }
   return (
     <div>
