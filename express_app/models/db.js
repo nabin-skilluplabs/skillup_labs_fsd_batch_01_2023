@@ -1,4 +1,4 @@
-import { Prisma, PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 
 let prisma;
 
@@ -13,8 +13,6 @@ else {
 }
 
 function getClient() {
-    const { DATABASE_URL } = process.env;
-    
     const client = new PrismaClient();
     client.$connect();
     return client;
