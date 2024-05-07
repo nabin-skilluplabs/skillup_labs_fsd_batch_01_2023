@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { object, string } from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-
+import { useNavigate } from "react-router-dom";
 
 let formSchema = object({
     name: string().required('This field is required!'),
@@ -11,6 +11,8 @@ let formSchema = object({
   });
 
 function EnrollmentForm() {
+    const navigate = useNavigate();
+
     const {
         register,
         handleSubmit,
@@ -29,9 +31,12 @@ function EnrollmentForm() {
             body: JSON.stringify(data)
        });
 
-
-       console.log(response);
+       if(response.status === 200) {
+            return navigate('/students')
+       }
     }
+
+
 
     return (
         <div>

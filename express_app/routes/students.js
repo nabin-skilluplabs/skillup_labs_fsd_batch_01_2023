@@ -7,7 +7,11 @@ var router = express.Router();
 /* GET students listing. */
 router.get('/', async function(req, res, next) {
   // const studentsRecord = await fs.readFileSync('./data/students.json', 'utf8');
-  const studentsRecord = await prisma.student.findMany();
+  const studentsRecord = await prisma.student.findMany({
+    orderBy: {
+      id: 'desc',
+    },
+  });
   res.json({data: studentsRecord});
 });
 

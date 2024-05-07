@@ -12,7 +12,7 @@ function Students() {
     },[])
     return (
         <>
-        <h2 className="text-4xl my-4">Students</h2>
+        <h2 className="text-4xl my-4">Total Students:  {students.length}</h2>
 
         {
             students.map((student, index) => (
