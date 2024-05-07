@@ -1,10 +1,10 @@
 import { useForm } from "react-hook-form";
 import { object, string } from "yup";
-import { yupResolver } from '@hookform/resolvers/yup';
+import { yupResolver } from "@hookform/resolvers/yup";
 
 let formSchema = object({
   fullName: string().required("This field is required!"),
-  email: string().email("Invalid email address!"),
+  email: string().required("email is required").email("Invalid email address!"),
   mobile: string().required("Mobile is required!"),
   address: string().required("Address is required!"),
 });
@@ -21,8 +21,15 @@ function EnrollmentForm() {
 
   console.log(errors);
 
-  function onSubmit(data) {
-    console.log(data);
+  async function onSubmit(data) {
+    const response = await fetch("http://localhost:3005/students", {
+      method: "post",
+      body: data,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    console.log(response);
   }
 
   return (
