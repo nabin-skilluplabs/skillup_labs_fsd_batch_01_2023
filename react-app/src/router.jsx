@@ -7,7 +7,7 @@ import DescribingTheUI from "./pages/DescribingTheUI";
 import News from "./pages/News";
 import ToDoApp from "./ToDoApp";
 import EnrollmentForm from "./pages/EnrollmentForm";
-import Student from "./pages/Student";
+import Student from "./pages/Students";
 
 const router = createBrowserRouter([
   {

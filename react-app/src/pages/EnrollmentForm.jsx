@@ -1,12 +1,14 @@
 import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers";
 import { object, string } from "yup";
+import { useNavigate } from "react-router-dom";
 
-// let formSchema = object() {
-//     fullName: string().required('This field is required'),
-//     email: string().email('Invalid email address'),
-//     mobile: string().required('Mobile is required'),
-//     address: string.required('Address ')
-// };
+let formSchema = object({
+  fullName: string().required("This field is required"),
+  email: string().email("Invalid email address"),
+  mobile: string().required("Mobile is required"),
+  address: string.required("Address "),
+});
 
 function EnrollmentForm() {
   const {
@@ -15,10 +17,21 @@ function EnrollmentForm() {
     watch,
     formState: { errors },
   } = useForm();
+  {resolver: yupResolver(formSchema)}
 
-  function onSubmit(data) {
-    console.log(data);
-  }
+  async function onSubmit(data) {
+    const response = await fetch('http://localhost:3004/students'{
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data),
+    });
+    if (response.status == 200) {
+  return navigate('/students')
+    }
+  };
+
   return (
     <div>
       <h1>Student Enrollment Form</h1>

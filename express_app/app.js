@@ -8,7 +8,7 @@ import cors from 'cors';
 
 import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
-import studentRouter from './routes/student.js';
+import studentRouter from './routes/students.js';
 
 var app = express();
 app.use(cors());
@@ -21,13 +21,14 @@ app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(express.json());
+// app.use(express.bodyParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/student', studentRouter);
+app.use('/students', studentRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
