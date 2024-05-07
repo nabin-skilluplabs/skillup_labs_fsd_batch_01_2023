@@ -14,6 +14,23 @@ router.get("/", async function (req, res, next) {
   res.json({ data: studentsRecord });
 });
 
+router.get("/:id", async function (req, res, next) {
+  const studentData = req.body;
+  const id = req.params.id && parseInt(req.params.id);
+
+  const { id_, ...data } = studentData;
+  if (!id) {
+    return res.status(404).send(`No student found`);
+  }
+
+  const existingStudent = await prisma.student.findUnique({ where: { id } });
+  if (!existingStudent) {
+    return res.status(404).send(`No student found with id ${id}`);
+  }
+
+  res.json(existingStudent);
+});
+
 router.post("/", async function (req, res, next) {
   const studentData = req.body;
   const newStudent = await prisma.student.create({

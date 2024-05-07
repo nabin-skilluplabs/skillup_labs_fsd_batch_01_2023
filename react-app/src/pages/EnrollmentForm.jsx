@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { object, string } from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useNavigate } from "react-router-dom";
 
 let formSchema = object({
   fullName: string().required("This field is required!"),
@@ -10,6 +11,7 @@ let formSchema = object({
 });
 
 function EnrollmentForm() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -19,8 +21,6 @@ function EnrollmentForm() {
     resolver: yupResolver(formSchema),
   });
 
-  console.log(errors);
-
   async function onSubmit(data) {
     const response = await fetch("http://localhost:3005/students", {
       method: "post",
@@ -28,8 +28,12 @@ function EnrollmentForm() {
       headers: {
         "Content-Type": "application/json",
       },
+      body: JSON.stringify(data),
     });
-    console.log(response);
+
+    if (response.status === 200) {
+      return navigate("/students");
+    }
   }
 
   return (
