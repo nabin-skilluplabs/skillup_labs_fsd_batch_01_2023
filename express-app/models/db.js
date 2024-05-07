@@ -1,4 +1,4 @@
-import { Prisma, PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 
 let prisma;
 let _db_;
@@ -13,15 +13,9 @@ if (process.env.NODE_ENV === "production") {
 }
 
 function getClient() {
-  const { DATABASE_URL } = process.env;
-
-  const client = new PrismaClient({
-    db: {
-      url: DATABASE_URL,
-    },
-  });
+  const client = new PrismaClient();
   client.$connect();
   return client;
 }
 
-export default Prisma;
+export default prisma;
