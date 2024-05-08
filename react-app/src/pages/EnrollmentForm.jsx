@@ -19,7 +19,7 @@ function EnrollmentForm() {
   } = useForm();
 
   async function onSubmit(data) {
-    const response = await fetch('http://loclahost/3005/students',{
+    const response = await fetch('http://localhost:3005/students',{
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
@@ -41,7 +41,7 @@ function EnrollmentForm() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label htmlFor="name">Full Name*</label>
-          <input className="border-2" type="text" {...register("fullName")} />
+          <input className="border-2" type="text" {...register("name")} />
         </div>
         <div>
           <label htmlFor="email">Email*</label>
